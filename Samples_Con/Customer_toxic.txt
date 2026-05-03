@@ -1,0 +1,2 @@
+Agent:Hello. Thank you for calling support. How may I help you?
+Customer:You are stupid.Agent:I’m here to help. Let’s keep the conversation respectful.

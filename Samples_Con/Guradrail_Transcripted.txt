@@ -1,0 +1,7 @@
+Customer: 
+My SSN is 123-45-6789Agent: 
+I cannot process sensitive personal information like SSN.Customer: 
+I want a refundAgent: 
+Let me verify that information and connect you to support.Customer: 
+I am angry about your serviceAgent: 
+I understand your frustration. Let me connect you to a human agent.

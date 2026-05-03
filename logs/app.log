@@ -1,0 +1,1262 @@
+2026-04-14T00:48:40 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=sess-1 has_transcript=False has_audio=False
+2026-04-14T00:48:40 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=sess-2 has_transcript=True has_audio=False
+2026-04-14T00:48:40 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=sess-2 input_type=transcript word_count=7
+2026-04-14T00:48:40 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=sess-3
+2026-04-14T00:48:40 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=sess-3 source=provided_transcript word_count=6
+2026-04-14T00:48:40 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=sess-4
+2026-04-14T00:48:40 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=5
+2026-04-14T00:48:40 | WARNING | app.agents.call_center.summarization_agent | Failed to parse summary JSON, using fallback
+2026-04-14T00:48:40 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=0 action_items=0 tags=['fallback']
+2026-04-14T00:48:40 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=2
+2026-04-14T00:48:40 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=1.00 tone=1.00 empathy=0.00 professionalism=0.00 resolution=0.70 compliance_flags=['missing_disclaimer']
+2026-04-14T00:48:40 | WARNING | app.api.routes.call_center | Call analysis upload validation error: Uploaded audio_file is empty
+2026-04-14T00:49:10 | WARNING | app.agents.call_center.agent | Failed to parse intent JSON: not valid json
+2026-04-14T00:49:10 | INFO | app.agents.call_center.agent | Created new session: sess-001
+2026-04-14T00:49:10 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] START | session=sess-001 history_turns=0
+2026-04-14T00:49:10 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] intent_classified | session=sess-001 intent=general_inquiry confidence=0.8 escalate=False -> invoking LLM
+2026-04-14T00:49:10 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] END | session=sess-001 detected_intent=general_inquiry escalate=False
+2026-04-14T00:49:10 | INFO | app.agents.call_center.agent | Created new session: sess-history
+2026-04-14T00:49:10 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] START | session=sess-history history_turns=0
+2026-04-14T00:49:10 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] intent_classified | session=sess-history intent=general_inquiry confidence=0.8 escalate=False -> invoking LLM
+2026-04-14T00:49:10 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] END | session=sess-history detected_intent=general_inquiry escalate=False
+2026-04-14T00:49:10 | INFO | app.agents.call_center.agent | Cleared session: to-clear
+2026-04-14T00:49:10 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=sess-1 has_transcript=False has_audio=False
+2026-04-14T00:49:10 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=sess-2 has_transcript=True has_audio=False
+2026-04-14T00:49:10 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=sess-2 input_type=transcript word_count=7
+2026-04-14T00:49:10 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=sess-3
+2026-04-14T00:49:10 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=sess-3 source=provided_transcript word_count=6
+2026-04-14T00:49:10 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=sess-4
+2026-04-14T00:49:10 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=5
+2026-04-14T00:49:10 | WARNING | app.agents.call_center.summarization_agent | Failed to parse summary JSON, using fallback
+2026-04-14T00:49:10 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=0 action_items=0 tags=['fallback']
+2026-04-14T00:49:10 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=2
+2026-04-14T00:49:10 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=1.00 tone=1.00 empathy=0.00 professionalism=0.00 resolution=0.70 compliance_flags=['missing_disclaimer']
+2026-04-14T00:49:10 | WARNING | app.api.routes.call_center | Call analysis upload validation error: Uploaded audio_file is empty
+2026-04-14T15:45:18 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001-scenario-1 customer_id=None mode=graph
+2026-04-14T15:45:18 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-14T15:45:18 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001-scenario-1 has_transcript=True has_audio=False
+2026-04-14T15:45:18 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001-scenario-1 input_type=transcript word_count=15
+2026-04-14T15:45:18 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=15 -> handoff to transcription_node
+2026-04-14T15:45:18 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-14T15:45:18 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001-scenario-1
+2026-04-14T15:45:18 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001-scenario-1 source=provided_transcript word_count=15
+2026-04-14T15:45:18 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=15 -> handoff to summarization_node + quality_node
+2026-04-14T15:45:18 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-14T15:45:18 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=15
+2026-04-14T15:45:22 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=3 action_items=3 tags=['billing', 'refund', 'subscription']
+2026-04-14T15:45:22 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=3 action_items=3 -> handoff to quality_node
+2026-04-14T15:45:22 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-14T15:45:22 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=15
+2026-04-14T15:45:24 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.60 compliance_flags=[]
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-14T15:45:24 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-14T15:45:24 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001-scenario-1 route=standard_complete
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001-scenario-1 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001-scenario-2 customer_id=None mode=graph
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-14T15:45:24 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001-scenario-2 has_transcript=True has_audio=False
+2026-04-14T15:45:24 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001-scenario-2 input_type=transcript word_count=16
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=16 -> handoff to transcription_node
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-14T15:45:24 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001-scenario-2
+2026-04-14T15:45:24 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001-scenario-2 source=provided_transcript word_count=16
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=16 -> handoff to summarization_node + quality_node
+2026-04-14T15:45:24 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-14T15:45:24 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=16
+2026-04-14T15:45:28 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=3 action_items=3 tags=['mobile app', 'iOS', 'crash issue', 'customer support']
+2026-04-14T15:45:28 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=3 action_items=3 -> handoff to quality_node
+2026-04-14T15:45:28 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-14T15:45:28 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=16
+2026-04-14T15:45:30 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.60 compliance_flags=[]
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-14T15:45:30 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-14T15:45:30 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001-scenario-2 route=standard_complete
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001-scenario-2 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001-scenario-3 customer_id=None mode=graph
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-14T15:45:30 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001-scenario-3 has_transcript=True has_audio=False
+2026-04-14T15:45:30 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001-scenario-3 input_type=transcript word_count=13
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=13 -> handoff to transcription_node
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-14T15:45:30 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001-scenario-3
+2026-04-14T15:45:30 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001-scenario-3 source=provided_transcript word_count=13
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=13 -> handoff to summarization_node + quality_node
+2026-04-14T15:45:30 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-14T15:45:30 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=13
+2026-04-14T15:45:32 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=3 action_items=3 tags=['customer_service', 'escalation', 'frustration', 'manager_callback']
+2026-04-14T15:45:32 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=3 action_items=3 -> handoff to quality_node
+2026-04-14T15:45:32 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-14T15:45:32 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=13
+2026-04-14T15:45:34 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.36 tone=0.40 empathy=0.30 professionalism=0.50 resolution=0.20 compliance_flags=['Customer frustration not adequately addressed', 'Lack of proactive resolution offered']
+2026-04-14T15:45:34 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.36 compliance_flags=['Customer frustration not adequately addressed', 'Lack of proactive resolution offered'] -> handoff to routing_node
+2026-04-14T15:45:34 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-14T15:45:34 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.36 compliance_flags=['Customer frustration not adequately addressed', 'Lack of proactive resolution offered']
+2026-04-14T15:45:34 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=human_review reason='Low overall QA score'
+2026-04-14T15:45:34 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=human_review used_fallback=True reason='Low overall QA score' -> END
+2026-04-14T15:45:34 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001-scenario-3 route=human_review
+2026-04-14T15:45:34 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001-scenario-3 route=human_review overall_score=0.36 pipeline_steps=5
+2026-04-14T19:06:41 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-14T19:06:41 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-14T19:06:41 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-14T19:06:41 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=125
+2026-04-14T19:06:41 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=125 -> handoff to transcription_node
+2026-04-14T19:06:41 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-14T19:06:41 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-14T19:06:41 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=125
+2026-04-14T19:06:41 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=125 -> handoff to summarization_node + quality_node
+2026-04-14T19:06:41 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-14T19:06:41 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=125
+2026-04-14T19:06:45 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['billing', 'refund', 'customer service', 'duplicate charge']
+2026-04-14T19:06:45 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-14T19:06:45 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-14T19:06:45 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=125
+2026-04-14T19:06:48 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.92 tone=0.90 empathy=0.80 professionalism=0.90 resolution=1.00 compliance_flags=[]
+2026-04-14T19:06:48 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.92 compliance_flags=[] -> handoff to routing_node
+2026-04-14T19:06:48 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-14T19:06:48 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.92 compliance_flags=[]
+2026-04-14T19:06:48 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-14T19:06:48 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-14T19:06:48 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-14T19:06:48 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.92 pipeline_steps=5
+2026-04-14T19:12:00 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-14T19:12:00 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-14T19:12:00 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-14T19:12:00 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=32
+2026-04-14T19:12:00 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=32 -> handoff to transcription_node
+2026-04-14T19:12:00 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-14T19:12:00 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-14T19:12:00 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=32
+2026-04-14T19:12:00 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=32 -> handoff to summarization_node + quality_node
+2026-04-14T19:12:00 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-14T19:12:00 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=32
+2026-04-14T19:12:04 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=3 action_items=3 tags=['billing', 'refund', 'customer support']
+2026-04-14T19:12:04 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=3 action_items=3 -> handoff to quality_node
+2026-04-14T19:12:04 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-14T19:12:04 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=32
+2026-04-14T19:12:07 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.50 compliance_flags=[]
+2026-04-14T19:12:07 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-14T19:12:07 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-14T19:12:07 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-14T19:12:07 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-14T19:12:07 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-14T19:12:07 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-14T19:12:07 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-18T00:08:53 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T00:08:53 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T00:08:53 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T00:08:53 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T00:08:53 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T00:08:53 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T00:08:53 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T00:08:53 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T00:08:56 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T00:08:56 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T00:08:56 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T00:08:56 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T00:08:56 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T00:08:56 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T00:08:56 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T00:08:56 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T00:08:56 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T00:08:56 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T00:08:56 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T00:08:56 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T00:08:56 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T00:08:56 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T00:08:56 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T00:08:56 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T00:08:57 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=97
+2026-04-18T00:08:57 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=97 -> handoff to summarization_node + quality_node
+2026-04-18T00:08:57 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T00:08:57 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=97
+2026-04-18T00:09:00 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=97
+2026-04-18T00:09:00 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=97 -> handoff to summarization_node + quality_node
+2026-04-18T00:09:00 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T00:09:00 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=97
+2026-04-18T00:09:01 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=2 tags=['billing', 'refund', 'customer support']
+2026-04-18T00:09:01 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=2 -> handoff to quality_node
+2026-04-18T00:09:01 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T00:09:01 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=97
+2026-04-18T00:09:01 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=97
+2026-04-18T00:09:01 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=97 -> handoff to summarization_node + quality_node
+2026-04-18T00:09:01 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T00:09:01 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=97
+2026-04-18T00:09:03 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.92 tone=0.90 empathy=0.80 professionalism=0.90 resolution=1.00 compliance_flags=[]
+2026-04-18T00:09:03 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.92 compliance_flags=[] -> handoff to routing_node
+2026-04-18T00:09:03 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T00:09:03 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.92 compliance_flags=[]
+2026-04-18T00:09:03 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T00:09:03 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T00:09:03 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T00:09:03 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.92 pipeline_steps=5
+2026-04-18T00:09:04 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=2 tags=['billing', 'refund', 'customer support']
+2026-04-18T00:09:04 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=2 -> handoff to quality_node
+2026-04-18T00:09:04 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T00:09:04 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=97
+2026-04-18T00:09:05 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=2 tags=['billing', 'refund', 'customer support']
+2026-04-18T00:09:05 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=2 -> handoff to quality_node
+2026-04-18T00:09:05 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T00:09:05 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=97
+2026-04-18T00:09:07 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.92 tone=0.90 empathy=0.80 professionalism=0.90 resolution=1.00 compliance_flags=[]
+2026-04-18T00:09:07 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.92 compliance_flags=[] -> handoff to routing_node
+2026-04-18T00:09:07 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T00:09:07 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.92 compliance_flags=[]
+2026-04-18T00:09:07 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T00:09:07 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T00:09:07 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T00:09:07 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.92 pipeline_steps=5
+2026-04-18T00:09:07 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.92 tone=0.90 empathy=0.80 professionalism=0.90 resolution=1.00 compliance_flags=[]
+2026-04-18T00:09:07 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.92 compliance_flags=[] -> handoff to routing_node
+2026-04-18T00:09:07 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T00:09:07 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.92 compliance_flags=[]
+2026-04-18T00:09:07 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T00:09:07 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T00:09:07 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T00:09:07 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.92 pipeline_steps=5
+2026-04-18T00:21:15 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T00:21:15 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T00:21:15 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T00:21:15 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=95
+2026-04-18T00:21:15 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=95 -> handoff to transcription_node
+2026-04-18T00:21:15 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T00:21:15 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T00:21:15 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=95
+2026-04-18T00:21:15 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=95 -> handoff to summarization_node + quality_node
+2026-04-18T00:21:15 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T00:21:15 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=95
+2026-04-18T00:21:17 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T00:21:17 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T00:21:17 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T00:21:17 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=95
+2026-04-18T00:21:17 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=95 -> handoff to transcription_node
+2026-04-18T00:21:17 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T00:21:17 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T00:21:17 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=95
+2026-04-18T00:21:17 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=95 -> handoff to summarization_node + quality_node
+2026-04-18T00:21:17 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T00:21:17 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=95
+2026-04-18T00:21:18 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['customer support', 'refund issue', 'escalation', 'follow-up']
+2026-04-18T00:21:18 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-18T00:21:18 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T00:21:18 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=95
+2026-04-18T00:21:20 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.80 tone=0.80 empathy=0.90 professionalism=0.90 resolution=0.70 compliance_flags=[]
+2026-04-18T00:21:20 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.80 compliance_flags=[] -> handoff to routing_node
+2026-04-18T00:21:20 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T00:21:20 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.80 compliance_flags=[]
+2026-04-18T00:21:20 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T00:21:20 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T00:21:20 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T00:21:20 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.80 pipeline_steps=5
+2026-04-18T00:21:21 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['customer support', 'refund issue', 'escalation', 'follow-up']
+2026-04-18T00:21:21 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-18T00:21:21 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T00:21:21 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=95
+2026-04-18T00:21:22 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.80 tone=0.80 empathy=0.90 professionalism=0.90 resolution=0.70 compliance_flags=[]
+2026-04-18T00:21:22 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.80 compliance_flags=[] -> handoff to routing_node
+2026-04-18T00:21:22 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T00:21:22 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.80 compliance_flags=[]
+2026-04-18T00:21:22 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T00:21:22 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T00:21:22 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T00:21:22 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.80 pipeline_steps=5
+2026-04-18T00:29:45 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T00:29:45 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T00:29:45 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T00:29:45 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=32
+2026-04-18T00:29:45 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=32 -> handoff to transcription_node
+2026-04-18T00:29:45 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T00:29:45 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T00:29:45 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=32
+2026-04-18T00:29:45 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=32 -> handoff to summarization_node + quality_node
+2026-04-18T00:29:45 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T00:29:45 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=32
+2026-04-18T00:29:48 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=3 action_items=3 tags=['billing', 'refund', 'customer support']
+2026-04-18T00:29:48 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=3 action_items=3 -> handoff to quality_node
+2026-04-18T00:29:48 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T00:29:48 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=32
+2026-04-18T00:29:50 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.50 compliance_flags=[]
+2026-04-18T00:29:50 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-18T00:29:50 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T00:29:50 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-18T00:29:50 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T00:29:50 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T00:29:50 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T00:29:50 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-18T00:46:38 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T00:46:38 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T00:46:38 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T00:46:38 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T00:46:38 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T00:46:38 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T00:46:38 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T00:46:38 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T00:46:41 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=76
+2026-04-18T00:46:41 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=76 -> handoff to summarization_node + quality_node
+2026-04-18T00:46:41 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T00:46:41 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=76
+2026-04-18T00:46:46 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['account issue', 'technical support', 'escalation', 'high priority']
+2026-04-18T00:46:46 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-18T00:46:46 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T00:46:46 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=76
+2026-04-18T00:46:48 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.74 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.60 compliance_flags=[]
+2026-04-18T00:46:48 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.74 compliance_flags=[] -> handoff to routing_node
+2026-04-18T00:46:48 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T00:46:48 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.74 compliance_flags=[]
+2026-04-18T00:46:48 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T00:46:48 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T00:46:48 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T00:46:48 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.74 pipeline_steps=5
+2026-04-18T00:47:34 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T00:47:34 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T00:47:34 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T00:47:34 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=95
+2026-04-18T00:47:34 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=95 -> handoff to transcription_node
+2026-04-18T00:47:34 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T00:47:34 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T00:47:34 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=95
+2026-04-18T00:47:34 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=95 -> handoff to summarization_node + quality_node
+2026-04-18T00:47:34 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T00:47:34 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=95
+2026-04-18T00:47:37 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['customer_support', 'refund_issue', 'escalation', 'follow_up']
+2026-04-18T00:47:37 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-18T00:47:37 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T00:47:37 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=95
+2026-04-18T00:47:39 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.83 tone=0.80 empathy=0.90 professionalism=0.90 resolution=0.70 compliance_flags=[]
+2026-04-18T00:47:39 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.83 compliance_flags=[] -> handoff to routing_node
+2026-04-18T00:47:39 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T00:47:39 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.83 compliance_flags=[]
+2026-04-18T00:47:39 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T00:47:39 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T00:47:39 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T00:47:39 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.83 pipeline_steps=5
+2026-04-18T00:55:04 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T00:55:04 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T00:55:04 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T00:55:04 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=95
+2026-04-18T00:55:04 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=95 -> handoff to transcription_node
+2026-04-18T00:55:04 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T00:55:04 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T00:55:04 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=95
+2026-04-18T00:55:04 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=95 -> handoff to summarization_node + quality_node
+2026-04-18T00:55:04 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T00:55:04 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=95
+2026-04-18T00:55:08 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['customer_support', 'refund_issue', 'escalation', 'follow_up']
+2026-04-18T00:55:08 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T00:55:08 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T00:55:08 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=95
+2026-04-18T00:55:10 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.80 tone=0.80 empathy=0.90 professionalism=0.90 resolution=0.70 compliance_flags=[]
+2026-04-18T00:55:10 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.80 compliance_flags=[] -> handoff to routing_node
+2026-04-18T00:55:10 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T00:55:10 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.80 compliance_flags=[]
+2026-04-18T00:55:10 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T00:55:10 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T00:55:10 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T00:55:10 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.80 pipeline_steps=5
+2026-04-18T00:59:47 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T00:59:47 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T00:59:47 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T00:59:47 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=95
+2026-04-18T00:59:47 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=95 -> handoff to transcription_node
+2026-04-18T00:59:47 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T00:59:47 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T00:59:47 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=95
+2026-04-18T00:59:47 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=95 -> handoff to summarization_node + quality_node
+2026-04-18T00:59:47 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T00:59:47 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=95
+2026-04-18T00:59:51 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['customer_support', 'refund_issue', 'escalation', 'follow_up']
+2026-04-18T00:59:51 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T00:59:51 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T00:59:51 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=95
+2026-04-18T00:59:53 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.80 tone=0.80 empathy=0.90 professionalism=0.90 resolution=0.70 compliance_flags=[]
+2026-04-18T00:59:53 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.80 compliance_flags=[] -> handoff to routing_node
+2026-04-18T00:59:53 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T00:59:53 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.80 compliance_flags=[]
+2026-04-18T00:59:53 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T00:59:53 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T00:59:53 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T00:59:53 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.80 pipeline_steps=5
+2026-04-18T09:48:46 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T09:48:46 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T09:48:46 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T09:48:46 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=32
+2026-04-18T09:48:46 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=32 -> handoff to transcription_node
+2026-04-18T09:48:46 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T09:48:46 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T09:48:46 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=32
+2026-04-18T09:48:46 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=32 -> handoff to summarization_node + quality_node
+2026-04-18T09:48:46 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T09:48:46 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=32
+2026-04-18T09:48:51 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=3 action_items=3 tags=['billing', 'refund', 'customer support']
+2026-04-18T09:48:51 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=3 action_items=3 -> handoff to quality_node
+2026-04-18T09:48:51 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T09:48:51 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=32
+2026-04-18T09:48:55 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.50 compliance_flags=[]
+2026-04-18T09:48:55 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-18T09:48:55 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T09:48:55 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-18T09:48:55 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T09:48:55 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T09:48:55 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T09:48:55 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-18T09:51:07 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T09:51:07 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T09:51:07 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T09:51:07 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T09:51:07 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T09:51:07 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T09:51:07 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T09:51:07 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T09:51:09 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=87
+2026-04-18T09:51:09 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=87 -> handoff to summarization_node + quality_node
+2026-04-18T09:51:09 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T09:51:09 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=87
+2026-04-18T09:51:13 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['customer support', 'refund issue', 'escalation', 'follow-up']
+2026-04-18T09:51:13 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T09:51:13 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T09:51:13 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=87
+2026-04-18T09:51:15 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.75 tone=0.80 empathy=0.90 professionalism=0.85 resolution=0.70 compliance_flags=[]
+2026-04-18T09:51:15 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.75 compliance_flags=[] -> handoff to routing_node
+2026-04-18T09:51:15 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T09:51:15 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.75 compliance_flags=[]
+2026-04-18T09:51:15 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T09:51:15 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T09:51:15 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T09:51:15 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.75 pipeline_steps=5
+2026-04-18T09:52:22 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T09:52:22 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T09:52:22 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T09:52:22 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T09:52:22 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T09:52:22 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T09:52:22 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T09:52:22 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T09:52:25 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=97
+2026-04-18T09:52:25 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=97 -> handoff to summarization_node + quality_node
+2026-04-18T09:52:25 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T09:52:25 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=97
+2026-04-18T09:52:28 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=2 tags=['billing', 'refund', 'customer support']
+2026-04-18T09:52:28 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=2 -> handoff to quality_node
+2026-04-18T09:52:28 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T09:52:28 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=97
+2026-04-18T09:52:29 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.92 tone=0.90 empathy=0.80 professionalism=0.90 resolution=1.00 compliance_flags=[]
+2026-04-18T09:52:29 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.92 compliance_flags=[] -> handoff to routing_node
+2026-04-18T09:52:29 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T09:52:29 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.92 compliance_flags=[]
+2026-04-18T09:52:29 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T09:52:29 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T09:52:29 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T09:52:29 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.92 pipeline_steps=5
+2026-04-18T10:13:10 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T10:13:10 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T10:13:10 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T10:13:10 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=32
+2026-04-18T10:13:10 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=32 -> handoff to transcription_node
+2026-04-18T10:13:10 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T10:13:10 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T10:13:10 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=32
+2026-04-18T10:13:10 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=32 -> handoff to summarization_node + quality_node
+2026-04-18T10:13:10 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T10:13:10 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=32
+2026-04-18T10:13:15 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=3 action_items=3 tags=['billing', 'refund', 'customer support']
+2026-04-18T10:13:15 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=3 action_items=3 -> handoff to quality_node
+2026-04-18T10:13:15 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T10:13:15 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=32
+2026-04-18T10:13:16 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.50 compliance_flags=[]
+2026-04-18T10:13:16 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-18T10:13:16 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T10:13:16 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-18T10:13:16 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T10:13:16 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T10:13:16 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T10:13:16 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-18T10:16:18 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T10:16:18 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T10:16:18 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T10:16:18 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=32
+2026-04-18T10:16:18 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=32 -> handoff to transcription_node
+2026-04-18T10:16:18 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T10:16:18 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T10:16:18 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=32
+2026-04-18T10:16:18 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=32 -> handoff to summarization_node + quality_node
+2026-04-18T10:16:18 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T10:16:18 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=32
+2026-04-18T10:16:22 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['billing', 'refund', 'customer support']
+2026-04-18T10:16:22 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-18T10:16:22 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T10:16:22 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=32
+2026-04-18T10:16:24 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.50 compliance_flags=[]
+2026-04-18T10:16:24 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-18T10:16:24 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T10:16:24 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-18T10:16:24 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T10:16:24 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T10:16:24 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T10:16:24 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-18T10:17:56 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T10:17:56 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T10:17:56 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T10:17:56 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T10:17:56 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T10:17:56 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T10:17:56 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T10:17:56 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T10:18:01 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=87
+2026-04-18T10:18:01 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=87 -> handoff to summarization_node + quality_node
+2026-04-18T10:18:01 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T10:18:01 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=87
+2026-04-18T10:18:05 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['customer support', 'refund issue', 'escalation', 'follow-up']
+2026-04-18T10:18:05 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T10:18:05 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T10:18:05 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=87
+2026-04-18T10:18:06 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.82 tone=0.80 empathy=0.90 professionalism=0.85 resolution=0.70 compliance_flags=[]
+2026-04-18T10:18:06 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.82 compliance_flags=[] -> handoff to routing_node
+2026-04-18T10:18:06 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T10:18:06 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.82 compliance_flags=[]
+2026-04-18T10:18:06 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T10:18:06 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T10:18:06 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T10:18:06 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.82 pipeline_steps=5
+2026-04-18T10:34:35 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-18T10:34:35 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T10:34:35 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T10:34:35 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T10:34:35 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T10:34:38 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=87
+2026-04-18T10:34:38 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=whisper words=87
+2026-04-18T10:38:52 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-18T10:38:52 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T10:38:52 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T10:38:52 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T10:38:52 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T10:38:57 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=87
+2026-04-18T10:38:57 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=whisper words=87
+2026-04-18T10:52:48 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T10:52:48 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T10:52:48 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T10:52:48 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=27
+2026-04-18T10:52:48 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=27 -> handoff to transcription_node
+2026-04-18T10:52:48 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T10:52:48 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T10:52:48 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=27
+2026-04-18T10:52:48 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=27 -> handoff to summarization_node + quality_node
+2026-04-18T10:52:48 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T10:52:48 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=27
+2026-04-18T10:52:53 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['customer_service', 'issue_resolution', 'follow_up', 'frustration']
+2026-04-18T10:52:53 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-18T10:52:53 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T10:52:53 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=27
+2026-04-18T10:52:55 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.58 tone=0.70 empathy=0.60 professionalism=0.80 resolution=0.40 compliance_flags=[]
+2026-04-18T10:52:55 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.58 compliance_flags=[] -> handoff to routing_node
+2026-04-18T10:52:55 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T10:52:55 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.58 compliance_flags=[]
+2026-04-18T10:52:55 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T10:52:55 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T10:52:55 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T10:52:55 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.58 pipeline_steps=5
+2026-04-18T10:53:06 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-18T10:53:06 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T10:53:06 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T10:53:06 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T10:53:06 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T10:53:10 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=87
+2026-04-18T10:53:10 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=whisper words=87
+2026-04-18T10:54:06 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T10:54:06 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T10:54:06 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T10:54:06 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T10:54:06 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T10:54:06 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T10:54:06 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T10:54:06 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T10:54:08 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=87
+2026-04-18T10:54:08 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=87 -> handoff to summarization_node + quality_node
+2026-04-18T10:54:08 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T10:54:08 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=87
+2026-04-18T10:54:13 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['customer support', 'refund', 'escalation', 'follow-up']
+2026-04-18T10:54:13 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-18T10:54:13 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T10:54:13 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=87
+2026-04-18T10:54:15 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.76 tone=0.80 empathy=0.90 professionalism=0.85 resolution=0.70 compliance_flags=[]
+2026-04-18T10:54:15 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.76 compliance_flags=[] -> handoff to routing_node
+2026-04-18T10:54:15 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T10:54:15 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.76 compliance_flags=[]
+2026-04-18T10:54:15 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T10:54:15 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T10:54:15 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T10:54:15 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.76 pipeline_steps=5
+2026-04-18T11:08:16 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T11:08:16 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T11:08:16 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T11:08:16 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=101
+2026-04-18T11:08:16 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=101 -> handoff to transcription_node
+2026-04-18T11:08:16 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T11:08:16 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T11:08:16 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=101
+2026-04-18T11:08:16 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=101 -> handoff to summarization_node + quality_node
+2026-04-18T11:08:16 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T11:08:16 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=101
+2026-04-18T11:08:20 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['customer_support', 'refund_issue', 'escalation', 'follow_up']
+2026-04-18T11:08:20 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T11:08:20 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T11:08:20 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=101
+2026-04-18T11:08:24 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.76 tone=0.80 empathy=0.90 professionalism=0.85 resolution=0.70 compliance_flags=[]
+2026-04-18T11:08:24 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.76 compliance_flags=[] -> handoff to routing_node
+2026-04-18T11:08:24 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T11:08:24 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.76 compliance_flags=[]
+2026-04-18T11:08:24 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T11:08:24 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T11:08:24 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T11:08:24 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.76 pipeline_steps=5
+2026-04-18T11:09:18 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-18T11:09:18 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T11:09:18 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T11:09:18 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T11:09:18 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T11:09:23 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=76
+2026-04-18T11:09:23 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=whisper words=76
+2026-04-18T11:09:31 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T11:09:31 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T11:09:31 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T11:09:31 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T11:09:31 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T11:09:31 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T11:09:31 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T11:09:31 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T11:09:33 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=76
+2026-04-18T11:09:33 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=76 -> handoff to summarization_node + quality_node
+2026-04-18T11:09:33 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T11:09:33 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=76
+2026-04-18T11:09:37 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=2 tags=['account issue', 'technical support', 'escalation', 'high priority']
+2026-04-18T11:09:37 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=2 -> handoff to quality_node
+2026-04-18T11:09:37 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T11:09:37 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=76
+2026-04-18T11:09:39 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.60 compliance_flags=[]
+2026-04-18T11:09:39 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-18T11:09:39 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T11:09:39 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-18T11:09:39 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T11:09:39 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T11:09:39 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T11:09:39 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-18T11:14:23 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-18T11:14:23 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T11:14:23 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T11:14:23 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T11:14:23 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T11:14:25 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] No speaker labels detected, running diarization LLM | session=demo-session-001
+2026-04-18T11:14:27 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=85
+2026-04-18T11:14:27 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=whisper words=85
+2026-04-18T11:15:13 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T11:15:13 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T11:15:13 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T11:15:13 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T11:15:13 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T11:15:13 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T11:15:13 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T11:15:13 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T11:15:17 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] No speaker labels detected, running diarization LLM | session=demo-session-001
+2026-04-18T11:15:20 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=86
+2026-04-18T11:15:20 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=86 -> handoff to summarization_node + quality_node
+2026-04-18T11:15:20 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T11:15:20 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=86
+2026-04-18T11:15:22 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['account issue', 'technical support', 'escalation', 'customer service']
+2026-04-18T11:15:22 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T11:15:22 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T11:15:22 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=86
+2026-04-18T11:15:24 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.60 compliance_flags=[]
+2026-04-18T11:15:24 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-18T11:15:24 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T11:15:24 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-18T11:15:24 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T11:15:25 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T11:15:25 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T11:15:25 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-18T11:20:26 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-18T11:20:26 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T11:20:26 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=86
+2026-04-18T11:20:26 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T11:20:26 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=86
+2026-04-18T11:20:26 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=86
+2026-04-18T11:20:53 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-18T11:20:53 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T11:20:53 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=86
+2026-04-18T11:20:53 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T11:20:53 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=86
+2026-04-18T11:20:53 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=86
+2026-04-18T11:20:57 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T11:20:57 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T11:20:57 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T11:20:57 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=86
+2026-04-18T11:20:57 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=86 -> handoff to transcription_node
+2026-04-18T11:20:57 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T11:20:57 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T11:20:57 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=86
+2026-04-18T11:20:57 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=86 -> handoff to summarization_node + quality_node
+2026-04-18T11:20:57 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T11:20:57 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=86
+2026-04-18T11:21:01 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['account issue', 'technical support', 'escalation', 'customer service']
+2026-04-18T11:21:01 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T11:21:01 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T11:21:01 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=86
+2026-04-18T11:21:02 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.60 compliance_flags=[]
+2026-04-18T11:21:02 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-18T11:21:02 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T11:21:02 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-18T11:21:02 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T11:21:02 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T11:21:02 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T11:21:02 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-18T11:58:18 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T11:58:18 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T11:58:18 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T11:58:18 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=32
+2026-04-18T11:58:18 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=32 -> handoff to transcription_node
+2026-04-18T11:58:18 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T11:58:18 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T11:58:18 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=32
+2026-04-18T11:58:18 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=32 -> handoff to summarization_node + quality_node
+2026-04-18T11:58:18 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T11:58:18 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=32
+2026-04-18T11:58:23 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=3 action_items=3 tags=['billing', 'refund', 'customer support']
+2026-04-18T11:58:23 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=3 action_items=3 -> handoff to quality_node
+2026-04-18T11:58:23 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T11:58:23 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=32
+2026-04-18T11:58:25 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.50 compliance_flags=[]
+2026-04-18T11:58:25 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-18T11:58:25 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T11:58:25 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-18T11:58:25 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T11:58:25 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T11:58:25 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T11:58:25 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-18T12:01:28 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-18T12:01:28 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T12:01:28 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=86
+2026-04-18T12:01:28 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T12:01:28 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=86
+2026-04-18T12:01:28 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=86
+2026-04-18T12:01:32 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T12:01:32 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T12:01:32 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T12:01:32 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=86
+2026-04-18T12:01:32 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=86 -> handoff to transcription_node
+2026-04-18T12:01:32 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T12:01:32 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T12:01:32 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=86
+2026-04-18T12:01:32 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=86 -> handoff to summarization_node + quality_node
+2026-04-18T12:01:32 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T12:01:32 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=86
+2026-04-18T12:01:37 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['account issue', 'technical support', 'escalation', 'customer service']
+2026-04-18T12:01:37 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T12:01:37 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T12:01:37 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=86
+2026-04-18T12:01:39 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.84 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.80 compliance_flags=[]
+2026-04-18T12:01:39 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.84 compliance_flags=[] -> handoff to routing_node
+2026-04-18T12:01:39 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T12:01:39 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.84 compliance_flags=[]
+2026-04-18T12:01:39 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T12:01:39 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T12:01:39 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T12:01:39 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.84 pipeline_steps=5
+2026-04-18T12:04:20 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-18T12:04:20 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T12:04:20 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T12:04:20 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T12:04:20 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T12:04:23 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] No speaker labels detected, running diarization LLM | session=demo-session-001
+2026-04-18T12:04:27 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=98
+2026-04-18T12:04:27 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=whisper words=98
+2026-04-18T12:04:35 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T12:04:35 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T12:04:35 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=False has_audio=True
+2026-04-18T12:04:35 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=audio word_count=0
+2026-04-18T12:04:35 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=audio word_count=0 -> handoff to transcription_node
+2026-04-18T12:04:35 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T12:04:35 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T12:04:35 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] Calling Whisper API | session=demo-session-001
+2026-04-18T12:04:37 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] No speaker labels detected, running diarization LLM | session=demo-session-001
+2026-04-18T12:04:40 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=whisper word_count=98
+2026-04-18T12:04:40 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=whisper word_count=98 -> handoff to summarization_node + quality_node
+2026-04-18T12:04:40 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T12:04:40 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=98
+2026-04-18T12:04:43 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=2 tags=['billing', 'refund', 'customer support']
+2026-04-18T12:04:43 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=2 -> handoff to quality_node
+2026-04-18T12:04:43 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T12:04:43 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=98
+2026-04-18T12:04:45 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.92 tone=0.90 empathy=0.80 professionalism=0.90 resolution=1.00 compliance_flags=[]
+2026-04-18T12:04:45 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.92 compliance_flags=[] -> handoff to routing_node
+2026-04-18T12:04:45 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T12:04:45 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.92 compliance_flags=[]
+2026-04-18T12:04:45 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T12:04:45 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T12:04:45 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T12:04:45 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.92 pipeline_steps=5
+2026-04-18T12:06:25 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T12:06:25 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T12:06:25 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T12:06:25 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=101
+2026-04-18T12:06:25 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=101 -> handoff to transcription_node
+2026-04-18T12:06:25 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T12:06:25 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T12:06:25 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=101
+2026-04-18T12:06:25 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=101 -> handoff to summarization_node + quality_node
+2026-04-18T12:06:25 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T12:06:25 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=101
+2026-04-18T12:06:29 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['customer support', 'refund issue', 'escalation', 'follow-up']
+2026-04-18T12:06:29 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-18T12:06:29 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T12:06:29 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=101
+2026-04-18T12:06:31 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.80 tone=0.80 empathy=0.90 professionalism=0.90 resolution=0.70 compliance_flags=[]
+2026-04-18T12:06:31 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.80 compliance_flags=[] -> handoff to routing_node
+2026-04-18T12:06:31 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T12:06:31 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.80 compliance_flags=[]
+2026-04-18T12:06:31 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T12:06:31 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T12:06:31 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T12:06:31 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.80 pipeline_steps=5
+2026-04-18T12:08:13 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T12:08:13 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T12:08:13 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T12:08:13 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=101
+2026-04-18T12:08:13 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=101 -> handoff to transcription_node
+2026-04-18T12:08:13 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T12:08:13 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T12:08:13 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=101
+2026-04-18T12:08:13 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=101 -> handoff to summarization_node + quality_node
+2026-04-18T12:08:13 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T12:08:13 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=101
+2026-04-18T12:08:18 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['customer_support', 'refund_issue', 'escalation', 'follow_up']
+2026-04-18T12:08:18 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T12:08:18 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T12:08:18 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=101
+2026-04-18T12:08:20 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.80 tone=0.80 empathy=0.90 professionalism=0.90 resolution=0.70 compliance_flags=[]
+2026-04-18T12:08:20 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.80 compliance_flags=[] -> handoff to routing_node
+2026-04-18T12:08:20 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T12:08:20 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.80 compliance_flags=[]
+2026-04-18T12:08:20 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T12:08:20 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T12:08:20 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T12:08:20 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.80 pipeline_steps=5
+2026-04-18T12:50:51 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-18T12:50:51 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T12:50:51 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=86
+2026-04-18T12:50:51 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T12:50:51 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=86
+2026-04-18T12:50:51 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=86
+2026-04-18T12:50:56 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T12:50:56 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T12:50:56 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T12:50:56 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=86
+2026-04-18T12:50:56 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=86 -> handoff to transcription_node
+2026-04-18T12:50:56 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T12:50:56 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T12:50:56 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=86
+2026-04-18T12:50:56 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=86 -> handoff to summarization_node + quality_node
+2026-04-18T12:50:56 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T12:50:56 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=86
+2026-04-18T12:51:00 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['account issue', 'technical support', 'escalation', 'customer service']
+2026-04-18T12:51:00 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T12:51:00 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T12:51:00 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=86
+2026-04-18T12:51:02 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.60 compliance_flags=[]
+2026-04-18T12:51:02 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-18T12:51:02 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T12:51:02 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-18T12:51:02 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T12:51:02 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T12:51:02 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T12:51:02 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-18T14:05:39 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T14:05:39 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T14:05:39 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T14:05:39 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=101
+2026-04-18T14:05:39 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=101 -> handoff to transcription_node
+2026-04-18T14:05:39 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T14:05:39 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T14:05:39 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=101
+2026-04-18T14:05:39 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=101 -> handoff to summarization_node + quality_node
+2026-04-18T14:05:39 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T14:05:39 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=101
+2026-04-18T14:05:44 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['customer_support', 'refund_issue', 'escalation', 'follow_up']
+2026-04-18T14:05:44 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-18T14:05:44 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T14:05:44 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=101
+2026-04-18T14:05:46 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.80 tone=0.80 empathy=0.90 professionalism=0.90 resolution=0.70 compliance_flags=[]
+2026-04-18T14:05:46 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.80 compliance_flags=[] -> handoff to routing_node
+2026-04-18T14:05:46 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T14:05:46 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.80 compliance_flags=[]
+2026-04-18T14:05:46 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T14:05:46 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T14:05:46 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T14:05:46 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.80 pipeline_steps=5
+2026-04-18T14:07:29 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-18T14:07:29 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-18T14:07:29 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-18T14:07:29 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=29
+2026-04-18T14:07:29 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=29 -> handoff to transcription_node
+2026-04-18T14:07:29 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-18T14:07:29 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-18T14:07:29 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=29
+2026-04-18T14:07:29 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=29 -> handoff to summarization_node + quality_node
+2026-04-18T14:07:29 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-18T14:07:29 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=29
+2026-04-18T14:07:32 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=2 tags=['app crash', 'iOS', 'support', 'escalation']
+2026-04-18T14:07:32 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=2 -> handoff to quality_node
+2026-04-18T14:07:32 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-18T14:07:32 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=29
+2026-04-18T14:07:34 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.60 compliance_flags=[]
+2026-04-18T14:07:34 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-18T14:07:34 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-18T14:07:34 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-18T14:07:34 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-18T14:07:34 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-18T14:07:34 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-18T14:07:34 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-20T01:26:05 | WARNING | app.agents.call_center.agent | Failed to parse intent JSON: not valid json
+2026-04-20T01:26:05 | INFO | app.agents.call_center.agent | Created new session: sess-001
+2026-04-20T01:26:05 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] START | session=sess-001 history_turns=0
+2026-04-20T01:26:05 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] intent_classified | session=sess-001 intent=general_inquiry confidence=0.8 escalate=False -> invoking LLM
+2026-04-20T01:26:05 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] END | session=sess-001 detected_intent=general_inquiry escalate=False
+2026-04-20T01:26:05 | INFO | app.agents.call_center.agent | Created new session: sess-history
+2026-04-20T01:26:05 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] START | session=sess-history history_turns=0
+2026-04-20T01:26:05 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] intent_classified | session=sess-history intent=general_inquiry confidence=0.8 escalate=False -> invoking LLM
+2026-04-20T01:26:05 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] END | session=sess-history detected_intent=general_inquiry escalate=False
+2026-04-20T01:26:05 | INFO | app.agents.call_center.agent | Cleared session: to-clear
+2026-04-20T01:26:05 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=sess-1 has_transcript=False has_audio=False
+2026-04-20T01:26:05 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=sess-2 has_transcript=True has_audio=False
+2026-04-20T01:26:05 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=sess-2 input_type=transcript word_count=7
+2026-04-20T01:26:06 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=sess-3
+2026-04-20T01:26:06 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=sess-3 source=provided_transcript word_count=6 pii_redacted=False injection_warning=False
+2026-04-20T01:26:06 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=sess-4
+2026-04-20T01:26:06 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=5
+2026-04-20T01:26:06 | WARNING | app.agents.call_center.summarization_agent | Failed to parse summary JSON, using fallback
+2026-04-20T01:26:06 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=0 action_items=0 tags=['fallback']
+2026-04-20T01:26:06 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=2
+2026-04-20T01:26:06 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=1.00 tone=1.00 empathy=0.00 professionalism=0.00 resolution=0.70 compliance_flags=['missing_disclaimer']
+2026-04-20T01:31:35 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn', 'email']
+2026-04-20T01:31:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'ignore all previous instructions'
+2026-04-20T01:31:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Unknown compliance flag 'weird_custom_flag' stored as 'unrecognized_weird_custom_flag'
+2026-04-20T01:34:00 | WARNING | app.agents.call_center.agent | Failed to parse intent JSON: not valid json
+2026-04-20T01:34:00 | INFO | app.agents.call_center.agent | Created new session: sess-001
+2026-04-20T01:34:00 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] START | session=sess-001 history_turns=0
+2026-04-20T01:34:00 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] intent_classified | session=sess-001 intent=general_inquiry confidence=0.8 escalate=False -> invoking LLM
+2026-04-20T01:34:00 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] END | session=sess-001 detected_intent=general_inquiry escalate=False
+2026-04-20T01:34:00 | INFO | app.agents.call_center.agent | Created new session: sess-history
+2026-04-20T01:34:00 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] START | session=sess-history history_turns=0
+2026-04-20T01:34:00 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] intent_classified | session=sess-history intent=general_inquiry confidence=0.8 escalate=False -> invoking LLM
+2026-04-20T01:34:00 | INFO | app.agents.call_center.agent | [CallCenterAgent.chat] END | session=sess-history detected_intent=general_inquiry escalate=False
+2026-04-20T01:34:00 | INFO | app.agents.call_center.agent | Cleared session: to-clear
+2026-04-20T01:34:00 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=sess-1 has_transcript=False has_audio=False
+2026-04-20T01:34:00 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=sess-2 has_transcript=True has_audio=False
+2026-04-20T01:34:00 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=sess-2 input_type=transcript word_count=7
+2026-04-20T01:34:00 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=sess-3
+2026-04-20T01:34:00 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=sess-3 source=provided_transcript word_count=6 pii_redacted=False injection_warning=False
+2026-04-20T01:34:00 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=sess-4
+2026-04-20T01:34:00 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=5
+2026-04-20T01:34:00 | WARNING | app.agents.call_center.summarization_agent | Failed to parse summary JSON, using fallback
+2026-04-20T01:34:00 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=0 action_items=0 tags=['fallback']
+2026-04-20T01:34:00 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=2
+2026-04-20T01:34:00 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=1.00 tone=1.00 empathy=0.00 professionalism=0.00 resolution=0.70 compliance_flags=['missing_disclaimer']
+2026-04-20T01:45:02 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=test
+2026-04-20T01:45:02 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=test has_transcript=True has_audio=False
+2026-04-20T01:45:02 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=test input_type=transcript word_count=7
+2026-04-20T01:45:02 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=test
+2026-04-20T01:45:02 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=test source=provided_transcript word_count=7 pii_redacted=False injection_warning=False
+2026-04-20T01:45:02 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=test source=provided_transcript words=7
+2026-04-20T02:10:23 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-20T02:10:23 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T02:10:23 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=86
+2026-04-20T02:10:23 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T02:10:23 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=86 pii_redacted=False injection_warning=False
+2026-04-20T02:10:23 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=86
+2026-04-20T02:15:05 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-20T02:15:05 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T02:15:05 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=70
+2026-04-20T02:15:05 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T02:15:05 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn']
+2026-04-20T02:15:05 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=70 pii_redacted=True injection_warning=False
+2026-04-20T02:15:05 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=70
+2026-04-20T02:15:13 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-20T02:15:13 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-20T02:15:13 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T02:15:13 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=70
+2026-04-20T02:15:13 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=70 -> handoff to transcription_node
+2026-04-20T02:15:13 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-20T02:15:13 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T02:15:13 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=70 pii_redacted=False injection_warning=False
+2026-04-20T02:15:13 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=70 -> handoff to summarization_node + quality_node
+2026-04-20T02:15:13 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-20T02:15:13 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=70
+2026-04-20T02:15:17 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['refund', 'customer service', 'escalation', 'user frustration']
+2026-04-20T02:15:17 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-20T02:15:17 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-20T02:15:17 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=70
+2026-04-20T02:15:20 | WARNING | app.agents.call_center.guardrails | [Guardrails] Unknown compliance flag 'Sensitive personal information not handled properly' stored as 'unrecognized_sensitive_personal_information_not_handled_properly'
+2026-04-20T02:15:20 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.70 empathy=0.80 professionalism=0.90 resolution=0.60 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly']
+2026-04-20T02:15:20 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly'] -> handoff to routing_node
+2026-04-20T02:15:20 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-20T02:15:20 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly']
+2026-04-20T02:15:20 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=compliance_review reason='Compliance flags detected'
+2026-04-20T02:15:20 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=compliance_review used_fallback=False reason='Compliance flags detected' -> END
+2026-04-20T02:15:20 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=compliance_review
+2026-04-20T02:15:20 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=compliance_review overall_score=0.70 pipeline_steps=5
+2026-04-20T02:17:40 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-20T02:17:40 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T02:17:40 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=56
+2026-04-20T02:17:40 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T02:17:40 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn']
+2026-04-20T02:17:40 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=56 pii_redacted=True injection_warning=False
+2026-04-20T02:17:40 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=56
+2026-04-20T02:17:58 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-20T02:17:58 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-20T02:17:58 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T02:17:58 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=56
+2026-04-20T02:17:58 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=56 -> handoff to transcription_node
+2026-04-20T02:17:58 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-20T02:17:58 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T02:17:58 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=56 pii_redacted=False injection_warning=False
+2026-04-20T02:17:58 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=56 -> handoff to summarization_node + quality_node
+2026-04-20T02:17:58 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-20T02:17:58 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=56
+2026-04-20T02:18:02 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=3 action_items=2 tags=['refund', 'customer service', 'frustration', 'sensitive information']
+2026-04-20T02:18:02 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=3 action_items=2 -> handoff to quality_node
+2026-04-20T02:18:02 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-20T02:18:02 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=56
+2026-04-20T02:18:04 | WARNING | app.agents.call_center.guardrails | [Guardrails] Unknown compliance flag 'Sensitive information handling' stored as 'unrecognized_sensitive_information_handling'
+2026-04-20T02:18:04 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.70 empathy=0.80 professionalism=0.90 resolution=0.60 compliance_flags=['unrecognized_sensitive_information_handling']
+2026-04-20T02:18:04 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=['unrecognized_sensitive_information_handling'] -> handoff to routing_node
+2026-04-20T02:18:04 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-20T02:18:04 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=['unrecognized_sensitive_information_handling']
+2026-04-20T02:18:04 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=compliance_review reason='Compliance flags detected'
+2026-04-20T02:18:04 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=compliance_review used_fallback=False reason='Compliance flags detected' -> END
+2026-04-20T02:18:04 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=compliance_review
+2026-04-20T02:18:04 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=compliance_review overall_score=0.70 pipeline_steps=5
+2026-04-20T02:25:35 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn']
+2026-04-20T02:25:35 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['email']
+2026-04-20T02:25:35 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['phone']
+2026-04-20T02:25:35 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['credit_card']
+2026-04-20T02:25:35 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['account_number']
+2026-04-20T02:25:35 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn', 'email']
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'ignore all previous instructions'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'Ignore previous instructions'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'forget your instructions'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'You are now'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'pretend you are'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'act as a'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'new system prompt'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'disregard all instructions'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'override your instructions'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'IGNORE ALL PREVIOUS INSTRUCTIONS'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Unknown compliance flag 'weird_custom_flag' stored as 'unrecognized_weird_custom_flag'
+2026-04-20T02:25:35 | WARNING | app.agents.call_center.guardrails | [Guardrails] Unknown compliance flag 'invented_flag' stored as 'unrecognized_invented_flag'
+2026-04-20T02:26:03 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-20T02:26:03 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T02:26:03 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=56
+2026-04-20T02:26:03 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T02:26:03 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn']
+2026-04-20T02:26:03 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=56 pii_redacted=True injection_warning=False
+2026-04-20T02:26:03 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=56
+2026-04-20T02:26:07 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-20T02:26:07 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-20T02:26:07 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T02:26:07 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=56
+2026-04-20T02:26:07 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=56 -> handoff to transcription_node
+2026-04-20T02:26:07 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-20T02:26:07 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T02:26:07 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=56 pii_redacted=False injection_warning=False
+2026-04-20T02:26:07 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=56 -> handoff to summarization_node + quality_node
+2026-04-20T02:26:07 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-20T02:26:07 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=56
+2026-04-20T02:26:10 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['refund', 'customer service', 'frustration', 'sensitive information']
+2026-04-20T02:26:10 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-20T02:26:10 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-20T02:26:10 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=56
+2026-04-20T02:26:12 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.70 empathy=0.80 professionalism=0.90 resolution=0.60 compliance_flags=[]
+2026-04-20T02:26:12 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=[] -> handoff to routing_node
+2026-04-20T02:26:12 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-20T02:26:12 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=[]
+2026-04-20T02:26:12 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-20T02:26:12 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-20T02:26:12 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-20T02:26:12 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.70 pipeline_steps=5
+2026-04-20T17:05:42 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-20T17:05:42 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T17:05:42 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=56
+2026-04-20T17:05:42 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T17:05:42 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn']
+2026-04-20T17:05:42 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=56 pii_redacted=True injection_warning=False
+2026-04-20T17:05:42 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=56
+2026-04-20T17:05:47 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-20T17:05:47 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-20T17:05:47 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T17:05:47 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=56
+2026-04-20T17:05:47 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=56 -> handoff to transcription_node
+2026-04-20T17:05:47 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-20T17:05:47 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T17:05:47 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=56 pii_redacted=False injection_warning=False
+2026-04-20T17:05:47 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=56 -> handoff to summarization_node + quality_node
+2026-04-20T17:05:47 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-20T17:05:47 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=56
+2026-04-20T17:05:51 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['refund', 'customer service', 'frustration', 'sensitive information']
+2026-04-20T17:05:51 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-20T17:05:51 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-20T17:05:51 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=56
+2026-04-20T17:05:53 | WARNING | app.agents.call_center.guardrails | [Guardrails] Unknown compliance flag 'Sensitive personal information not handled properly' stored as 'unrecognized_sensitive_personal_information_not_handled_properly'
+2026-04-20T17:05:53 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.70 empathy=0.80 professionalism=0.90 resolution=0.60 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly']
+2026-04-20T17:05:53 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly'] -> handoff to routing_node
+2026-04-20T17:05:53 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-20T17:05:53 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly']
+2026-04-20T17:05:53 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=compliance_review reason='Compliance flags detected'
+2026-04-20T17:05:53 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=compliance_review used_fallback=False reason='Compliance flags detected' -> END
+2026-04-20T17:05:53 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=compliance_review
+2026-04-20T17:05:53 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=compliance_review overall_score=0.70 pipeline_steps=5
+2026-04-20T17:08:30 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-20T17:08:30 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T17:08:30 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=50
+2026-04-20T17:08:30 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T17:08:30 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn']
+2026-04-20T17:08:30 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=50 pii_redacted=True injection_warning=False
+2026-04-20T17:08:30 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=50
+2026-04-20T17:08:41 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-20T17:08:41 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-20T17:08:41 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-20T17:08:41 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=50
+2026-04-20T17:08:41 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=50 -> handoff to transcription_node
+2026-04-20T17:08:41 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-20T17:08:41 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-20T17:08:41 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=50 pii_redacted=False injection_warning=False
+2026-04-20T17:08:41 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=50 -> handoff to summarization_node + quality_node
+2026-04-20T17:08:41 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-20T17:08:41 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=50
+2026-04-20T17:08:47 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['refund', 'customer service', 'frustration', 'support']
+2026-04-20T17:08:47 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-20T17:08:47 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-20T17:08:47 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=50
+2026-04-20T17:08:49 | WARNING | app.agents.call_center.guardrails | [Guardrails] Unknown compliance flag 'Sensitive personal information not handled properly' stored as 'unrecognized_sensitive_personal_information_not_handled_properly'
+2026-04-20T17:08:49 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.70 empathy=0.80 professionalism=0.90 resolution=0.60 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly']
+2026-04-20T17:08:49 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly'] -> handoff to routing_node
+2026-04-20T17:08:49 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-20T17:08:49 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly']
+2026-04-20T17:08:49 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=compliance_review reason='Compliance flags detected'
+2026-04-20T17:08:49 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=compliance_review used_fallback=False reason='Compliance flags detected' -> END
+2026-04-20T17:08:49 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=compliance_review
+2026-04-20T17:08:49 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=compliance_review overall_score=0.70 pipeline_steps=5
+2026-04-24T20:31:33 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn']
+2026-04-24T20:31:33 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['email']
+2026-04-24T20:31:33 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['phone']
+2026-04-24T20:31:33 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['credit_card']
+2026-04-24T20:31:33 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['account_number']
+2026-04-24T20:31:33 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn', 'email']
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'ignore all previous instructions'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'Ignore previous instructions'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'forget your instructions'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'You are now'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'pretend you are'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'act as a'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'new system prompt'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'disregard all instructions'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'override your instructions'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Prompt-injection pattern detected: 'IGNORE ALL PREVIOUS INSTRUCTIONS'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Unknown compliance flag 'weird_custom_flag' stored as 'unrecognized_weird_custom_flag'
+2026-04-24T20:31:33 | WARNING | app.agents.call_center.guardrails | [Guardrails] Unknown compliance flag 'invented_flag' stored as 'unrecognized_invented_flag'
+2026-04-25T12:18:39 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=test
+2026-04-25T12:18:39 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=test has_transcript=True has_audio=False
+2026-04-25T12:18:39 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=test input_type=transcript word_count=2
+2026-04-25T12:18:39 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=test
+2026-04-25T12:18:39 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=test source=provided_transcript word_count=2 pii_redacted=False injection_warning=False
+2026-04-25T12:18:39 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=test source=provided_transcript words=2
+2026-04-25T12:19:22 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-25T12:19:22 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-25T12:19:22 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=86
+2026-04-25T12:19:22 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-25T12:19:22 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=86 pii_redacted=False injection_warning=False
+2026-04-25T12:19:22 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=86
+2026-04-25T12:19:26 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-25T12:19:26 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-25T12:19:26 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-25T12:19:26 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=86
+2026-04-25T12:19:26 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=86 -> handoff to transcription_node
+2026-04-25T12:19:26 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-25T12:19:26 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-25T12:19:26 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=86 pii_redacted=False injection_warning=False
+2026-04-25T12:19:26 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=86 -> handoff to summarization_node + quality_node
+2026-04-25T12:19:26 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-25T12:19:26 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=86
+2026-04-25T12:19:29 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=5 action_items=3 tags=['account issue', 'technical support', 'escalation', 'customer service']
+2026-04-25T12:19:29 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=5 action_items=3 -> handoff to quality_node
+2026-04-25T12:19:29 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-25T12:19:29 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=86
+2026-04-25T12:19:30 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.84 tone=0.80 empathy=0.70 professionalism=0.90 resolution=0.80 compliance_flags=[]
+2026-04-25T12:19:30 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.84 compliance_flags=[] -> handoff to routing_node
+2026-04-25T12:19:30 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-25T12:19:30 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.84 compliance_flags=[]
+2026-04-25T12:19:30 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-25T12:19:30 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-25T12:19:30 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-25T12:19:30 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.84 pipeline_steps=5
+2026-04-25T12:19:44 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-25T12:19:44 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-25T12:19:44 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=50
+2026-04-25T12:19:44 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-25T12:19:44 | INFO | app.agents.call_center.guardrails | [Guardrails] PII redacted | types=['ssn']
+2026-04-25T12:19:44 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=50 pii_redacted=True injection_warning=False
+2026-04-25T12:19:44 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=50
+2026-04-25T12:19:48 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-25T12:19:48 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-25T12:19:48 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-25T12:19:48 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=50
+2026-04-25T12:19:48 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=50 -> handoff to transcription_node
+2026-04-25T12:19:48 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-25T12:19:48 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-25T12:19:48 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=50 pii_redacted=False injection_warning=False
+2026-04-25T12:19:48 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=50 -> handoff to summarization_node + quality_node
+2026-04-25T12:19:48 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-25T12:19:48 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=50
+2026-04-25T12:19:51 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=4 action_items=3 tags=['refund', 'customer service', 'frustration', 'support']
+2026-04-25T12:19:51 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=4 action_items=3 -> handoff to quality_node
+2026-04-25T12:19:51 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-25T12:19:51 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=50
+2026-04-25T12:19:53 | WARNING | app.agents.call_center.guardrails | [Guardrails] Unknown compliance flag 'Sensitive personal information not handled properly' stored as 'unrecognized_sensitive_personal_information_not_handled_properly'
+2026-04-25T12:19:53 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.70 tone=0.70 empathy=0.80 professionalism=0.90 resolution=0.60 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly']
+2026-04-25T12:19:53 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.70 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly'] -> handoff to routing_node
+2026-04-25T12:19:53 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-25T12:19:53 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.70 compliance_flags=['unrecognized_sensitive_personal_information_not_handled_properly']
+2026-04-25T12:19:53 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=compliance_review reason='Compliance flags detected'
+2026-04-25T12:19:53 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=compliance_review used_fallback=False reason='Compliance flags detected' -> END
+2026-04-25T12:19:53 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=compliance_review
+2026-04-25T12:19:53 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=compliance_review overall_score=0.70 pipeline_steps=5
+2026-04-25T12:20:45 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] START | session=demo-session-001
+2026-04-25T12:20:45 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-25T12:20:45 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=26
+2026-04-25T12:20:45 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-25T12:20:45 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=26 pii_redacted=False injection_warning=False
+2026-04-25T12:20:45 | INFO | app.agents.call_center.agent | [CallCenterAgent.intake_and_transcribe] END | session=demo-session-001 source=provided_transcript words=26
+2026-04-25T12:20:58 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] START | session=demo-session-001 customer_id=None mode=graph
+2026-04-25T12:20:58 | INFO | app.agents.call_center.agent | [Graph] intake_node -> running IntakeAgent
+2026-04-25T12:20:58 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] START | session=demo-session-001 has_transcript=True has_audio=False
+2026-04-25T12:20:58 | INFO | app.agents.call_center.intake_agent | [IntakeAgent] END | session=demo-session-001 input_type=transcript word_count=26
+2026-04-25T12:20:58 | INFO | app.agents.call_center.agent | [Graph] intake_node -> done | input_type=transcript word_count=26 -> handoff to transcription_node
+2026-04-25T12:20:58 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> running TranscriptionAgent
+2026-04-25T12:20:58 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] START | session=demo-session-001
+2026-04-25T12:20:58 | INFO | app.agents.call_center.transcription_agent | [TranscriptionAgent] END | session=demo-session-001 source=provided_transcript word_count=26 pii_redacted=False injection_warning=False
+2026-04-25T12:20:58 | INFO | app.agents.call_center.agent | [Graph] transcription_node -> done | source=provided_transcript word_count=26 -> handoff to summarization_node + quality_node
+2026-04-25T12:20:58 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> running SummarizationAgent
+2026-04-25T12:20:58 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] START | transcript_word_count=26
+2026-04-25T12:21:01 | INFO | app.agents.call_center.summarization_agent | [SummarizationAgent] END | key_points=3 action_items=3 tags=['customer support', 'communication', 'conflict resolution']
+2026-04-25T12:21:01 | INFO | app.agents.call_center.agent | [Graph] summarization_node -> done | key_points=3 action_items=3 -> handoff to quality_node
+2026-04-25T12:21:01 | INFO | app.agents.call_center.agent | [Graph] quality_node -> running QualityScoreAgent
+2026-04-25T12:21:01 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] START | transcript_word_count=26
+2026-04-25T12:21:03 | INFO | app.agents.call_center.quality_score_agent | [QualityScoreAgent] END | overall_score=0.50 tone=0.70 empathy=0.50 professionalism=0.80 resolution=0.20 compliance_flags=[]
+2026-04-25T12:21:03 | INFO | app.agents.call_center.agent | [Graph] quality_node -> done | overall_score=0.50 compliance_flags=[] -> handoff to routing_node
+2026-04-25T12:21:03 | INFO | app.agents.call_center.agent | [Graph] routing_node -> running RoutingAgent
+2026-04-25T12:21:03 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] START | overall_score=0.50 compliance_flags=[]
+2026-04-25T12:21:03 | INFO | app.agents.call_center.routing_agent | [RoutingAgent] END | route=standard_complete reason='Quality checks passed'
+2026-04-25T12:21:03 | INFO | app.agents.call_center.agent | [Graph] routing_node -> done | route=standard_complete used_fallback=False reason='Quality checks passed' -> END
+2026-04-25T12:21:03 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] LangGraph pipeline complete | session=demo-session-001 route=standard_complete
+2026-04-25T12:21:03 | INFO | app.agents.call_center.agent | [CallCenterAgent.analyze_call] END | session=demo-session-001 route=standard_complete overall_score=0.50 pipeline_steps=5
