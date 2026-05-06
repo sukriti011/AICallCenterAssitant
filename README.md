@@ -1,6 +1,6 @@
 ---
 title: AI Call Center Assistant
-emoji: 📞
+thumbnail: icon.png
 colorFrom: blue
 colorTo: indigo
 sdk: docker
