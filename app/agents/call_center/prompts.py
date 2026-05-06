@@ -31,7 +31,12 @@ CALL_SUMMARIZATION_PROMPT = """You are generating structured call insights.
 
 Given this call transcript, return valid JSON with these keys:
 - "summary": concise paragraph
-- "key_points": list of 3-5 bullets
+- "key_points": list of exactly 5 strings, each in "Label: value" format using these exact labels in this order:
+    1. "Customer issue: <brief description of what the customer needed, or Not specified>"
+    2. "Resolution: <what was done or offered, or Not specified>"
+    3. "Next step: <follow-up action required, or Not specified>"
+    4. "Escalation needed: Yes or No"
+    5. "Sentiment: Positive, Neutral, or Negative"
 - "action_items": list of concrete next steps
 - "tags": list of short topic tags
 

@@ -26,6 +26,7 @@ from app.agents.call_center.transcription_agent import TranscriptionAgent
 from app.agents.call_center.summarization_agent import SummarizationAgent
 from app.agents.call_center.quality_score_agent import QualityScoreAgent
 from app.agents.call_center.routing_agent import RoutingAgent
+from app.services.mcp_tools import run_mcp_actions
 from app.core.config import get_settings
 from app.core.logging import get_logger
 
@@ -248,11 +249,11 @@ class CallCenterAgent:
                 quality_score = result["quality_score"]
                 routing = result["routing"]
                 pipeline_trace = [
-                    PipelineTraceItem(step="intake", status="ok", detail="LangGraph", duration=result.get("intake_duration", "")),
-                    PipelineTraceItem(step="transcription", status="ok", detail="LangGraph", duration=result.get("transcription_duration", "")),
-                    PipelineTraceItem(step="summarization", status="ok", detail="LangGraph", duration=result.get("summarization_duration", "")),
-                    PipelineTraceItem(step="quality_scoring", status="ok", detail="LangGraph", duration=result.get("quality_scoring_duration", "")),
-                    PipelineTraceItem(step="routing", status="ok", detail="LangGraph", duration=result.get("routing_duration", "")),
+                    PipelineTraceItem(step="Intake Agent",        status="ok", detail="intake",         duration=result.get("intake_duration", "")),
+                    PipelineTraceItem(step="Transcription Agent", status="ok", detail="transcription",  duration=result.get("transcription_duration", "")),
+                    PipelineTraceItem(step="Summarization Agent", status="ok", detail="summarization",  duration=result.get("summarization_duration", "")),
+                    PipelineTraceItem(step="QA Scoring Agent",    status="ok", detail="quality_scoring",duration=result.get("quality_scoring_duration", "")),
+                    PipelineTraceItem(step="Routing Agent",       status="ok", detail="routing",        duration=result.get("routing_duration", "")),
                 ]
                 logger.info(
                     f"[CallCenterAgent.analyze_call] LangGraph pipeline complete | "
@@ -292,6 +293,14 @@ class CallCenterAgent:
             quality_score=quality_score,
             routing=routing,
             pipeline_trace=pipeline_trace,
+            mcp_actions=run_mcp_actions(
+                call_id=request.session_id,
+                customer_id=request.customer_id or "",
+                transcript=transcription.transcript,
+                summary=summary.summary,
+                escalation_needed=routing.route == "human_review" or bool(quality_score.compliance_flags),
+                risk_level="high" if quality_score.overall_score < 0.5 or bool(quality_score.compliance_flags) else "normal",
+            ),
         )
         logger.info(
             f"[CallCenterAgent.analyze_call] END | session={request.session_id} "

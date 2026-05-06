@@ -95,6 +95,7 @@ class AnalyzeCallResponse(BaseModel):
     quality_score: QualityScoreResult
     routing: RoutingResult
     pipeline_trace: list[PipelineTraceItem] = Field(default_factory=list)
+    mcp_actions: list[dict] = Field(default_factory=list)
 
 
 class IntakeTranscribeResponse(BaseModel):

@@ -4,24 +4,9 @@ services:
   api:
     build: .
     ports:
-      - "8000:8000"
+      - "7860:7860"
     env_file:
       - .env
     volumes:
       - ./data:/app/data
-    restart: unless-stopped
-
-  streamlit:
-    build: .
-    command: ["streamlit", "run", "app/ui/streamlit_app.py", "--server.address", "0.0.0.0", "--server.port", "8501"]
-    ports:
-      - "8501:8501"
-    env_file:
-      - .env
-    environment:
-      - CALL_CENTER_API_BASE_URL=http://api:8000/api/v1/call-center
-    volumes:
-      - ./data:/app/data
-    depends_on:
-      - api
     restart: unless-stopped
